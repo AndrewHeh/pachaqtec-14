@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    background-color: #ffff;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    gap: 10px;
+    position: fixed;
+    top: 0;
+    background: #fff;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+nav a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 600;
+    padding: 10px 15px;
+    border-radius: 20px;
+}
+
+nav a.active {
+    background: #000;
+    color: #fff;
+}
+
+nav a img {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+input {
+    width: 70%;
+    padding: 15px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    background: #E9E9E9;
+    font-weight: 500;
+}
+
+a.icon {
+    font-size: 20px;
+    border-radius: 50px;
+}
+
+a.icon:hover {
+    background: #d2d2d2;
+}
+
+/* Contenedor para las imágenes tipo Pinterest */
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+    padding: 20px;
+    margin-top: 70px; /* Añadir margen superior para evitar que las imágenes se superpongan con la barra de navegación */
+}
+
+.container img {
+    width: 100%;
+    border-radius: 16px;
+    object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.container img:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Botón "Guardar" que aparece al pasar el cursor sobre la imagen */
+.container .overlay {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: none;
+    background-color: red;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.container div {
+    position: relative;
+}
+
+.container div:hover .overlay {
+    display: block;
+}
+    
